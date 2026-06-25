@@ -288,29 +288,3 @@ sorted_<filename>
 מוצג שעון דיגיטלי המתעדכן בזמן אמת.
 
 ---
-
-# מבנה הפרויקט
-
-```text
-Scripts/
-├── add_prefix.sh
-├── ascii_clock.sh
-├── backup.sh
-├── check_internet.sh
-├── delete_old_files.sh
-├── generate_password.sh
-├── sort_file.sh
-├── summary.sh
-├── user_info.sh
-└── weather.sh
-```
-
----
-
-# דרישות מערכת
-
-- Bash
-- tar
-- curl (עבור `weather.sh`)
-- figlet (עבור `ascii_clock.sh`)
-- חיבור לאינטרנט (עבור `weather.sh` ו־`check_internet.sh`)
