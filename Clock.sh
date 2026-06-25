@@ -2,7 +2,7 @@
 
 if ! command -v figlet &> /dev/null; then
     echo "figlet is required but not installed. Installing..."
-    sudo apt-get update && sudo apt-get install -y figlet
+    sudo apt install -y figlet
 fi
 
 echo "Press [CTRL+C] to stop the clock."
