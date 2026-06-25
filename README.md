@@ -21,8 +21,8 @@
 
 ## שלבי הרצת סקריפטים
 1. גיבוי תכולת תיקיה ('backup.sh')
-```./scripts/backup.sh /path/to/source_directory
-
+```bash
+./scripts/backup.sh /path/to/source_directory
 ```
 
 
