@@ -9,7 +9,7 @@ CITY="$1"
 
 if ! command -v curl &> /dev/null; then
     echo "curl is not installed. Trying to install..."
-    sudo apt-get update && sudo apt-get install -y curl
+    sudo apt install -y curl
 fi
 
 echo "Fetching weather for $CITY..."
