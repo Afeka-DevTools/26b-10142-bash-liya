@@ -1,181 +1,185 @@
-# Bash Utility Scripts
+# סקריפטים שימושיים ב־Bash
 
-A collection of useful Bash scripts developed as part of the Linux/Bash course.
-The project contains ten standalone scripts that automate common system administration and file management tasks.
-
----
-
-# Team Members
-
-- **Yarin Luder** (212948376)
-- **Liya Joni** (214695173)
+פרויקט זה פותח במסגרת קורס Linux/Bash ומכיל אוסף של סקריפטים שימושיים הכתובים בשפת Bash. מטרת הפרויקט היא לבצע אוטומציה של פעולות נפוצות במערכת ההפעלה Linux, כגון יצירת גיבויים, ניהול קבצים, בדיקת חיבור לאינטרנט, הצגת מידע על המשתמש ועוד.
 
 ---
 
-# Division of Work
+# חברי הצוות
 
-## Liya's Scripts
-
-### 1. backup.sh
-Creates a compressed (`.tar.gz`) backup of a selected directory.
-
-### 2. generate_password.sh
-Generates a secure random password containing uppercase letters, lowercase letters, digits, and special characters.
-
-### 3. user_info.sh
-Displays information about the currently logged-in user, including username, home directory, groups, and default shell.
-
-### 4. summary.sh
-Displays a summary of a directory, including the number of files, directories, and symbolic links.
-
-### 5. sort_file.sh
-Sorts the contents of a text file alphabetically and saves the result into a new file.
+- **ירין לודר** – 212948376
+- **לייה ג'וני** – 214695173
 
 ---
 
-## Yarin's Scripts
+# חלוקת העבודה
 
-### 1. check_internet.sh
-Checks whether the computer has an active Internet connection by pinging Google's DNS server (8.8.8.8).
+## הסקריפטים של לייה
 
-### 2. add_prefix.sh
-Adds a user-defined prefix to every `.txt` file inside a specified directory.
+### backup.sh
+אחראי על יצירת גיבוי דחוס (`.tar.gz`) של תיקייה שהמשתמש בוחר.
 
-### 3. delete_old_files.sh
-Deletes files older than a specified number of days from a selected directory.
+### generate_password.sh
+יוצר סיסמה אקראית ומאובטחת הכוללת אותיות גדולות, אותיות קטנות, מספרים ותווים מיוחדים.
 
-### 4. weather.sh
-Retrieves the current weather for a given city using the wttr.in online weather service.
+### user_info.sh
+מציג מידע על המשתמש המחובר למערכת, כולל שם המשתמש, תיקיית הבית, הקבוצות שאליהן הוא משתייך וה־Shell הפעיל.
 
-### 5. ascii_clock.sh
-Displays a live digital clock in ASCII art using the `figlet` package.
+### summary.sh
+מציג מידע סטטיסטי על תיקייה, כגון מספר הקבצים, מספר התיקיות ומספר הקישורים הסימבוליים.
+
+### sort_file.sh
+ממיין את תוכן קובץ טקסט לפי סדר אלפביתי ושומר את הפלט בקובץ חדש.
 
 ---
 
-# Running the Scripts
+## הסקריפטים של ירין
 
-Make the scripts executable:
+### check_internet.sh
+בודק האם קיימת גישה לאינטרנט באמצעות שליחת בקשת Ping לשרת ה־DNS של Google.
+
+### add_prefix.sh
+מוסיף קידומת לכל קבצי ה־`.txt` הנמצאים בתיקייה שנבחרה על ידי המשתמש.
+
+### delete_old_files.sh
+מוחק קבצים ישנים מתיקייה בהתאם למספר הימים שהמשתמש מזין.
+
+### weather.sh
+מציג את מזג האוויר הנוכחי עבור עיר שהמשתמש מזין באמצעות השירות wttr.in.
+
+### ascii_clock.sh
+מציג שעון דיגיטלי בזמן אמת בפורמט ASCII באמצעות התוכנה `figlet`.
+
+---
+
+# הוראות הרצה
+
+יש להעניק תחילה הרשאות הרצה לכל הסקריפטים:
 
 ```bash
 chmod +x Scripts/*.sh
 ```
 
-Run a script using:
+לאחר מכן ניתן להריץ כל סקריפט באמצעות:
 
 ```bash
-./Scripts/script_name.sh [arguments]
+./Scripts/<שם_הסקריפט>.sh
 ```
 
 ---
 
-# Script Usage
+# הסבר על הסקריפטים
 
 ## backup.sh
 
-Creates a compressed backup of a directory.
+### מטרת הסקריפט
+יוצר גיבוי דחוס של תיקייה שהמשתמש בוחר.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/backup.sh <directory_path>
 ```
 
-### Required Input
+### קלט נדרש
 
-- Path to an existing directory.
+- נתיב לתיקייה קיימת.
 
-### Output
+### פלט
 
-A `.tar.gz` backup file inside the `backups` folder.
+נוצר קובץ גיבוי מסוג `.tar.gz` בתיקיית `backups`.
 
 ---
 
 ## generate_password.sh
 
-Generates a random secure password.
+### מטרת הסקריפט
+יוצר סיסמה אקראית ומאובטחת.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/generate_password.sh
 ```
 
-### Required Input
+### קלט נדרש
 
-None.
+אין.
 
-### Output
+### פלט
 
-A randomly generated password.
+מודפסת למסך סיסמה אקראית.
 
 ---
 
 ## user_info.sh
 
-Displays information about the current user.
+### מטרת הסקריפט
+מציג מידע על המשתמש המחובר למערכת.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/user_info.sh
 ```
 
-### Required Input
+### קלט נדרש
 
-None.
+אין.
 
-### Output
+### פלט
 
-- Username
-- Home directory
-- User groups
-- Default shell
+- שם המשתמש
+- תיקיית הבית
+- הקבוצות שאליהן המשתמש משתייך
+- ה־Shell הפעיל
 
 ---
 
 ## summary.sh
 
-Shows statistics about a directory.
+### מטרת הסקריפט
+מציג מידע סטטיסטי על תיקייה.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/summary.sh [directory]
 ```
 
-### Required Input
+### קלט נדרש
 
-Optional directory path.
+נתיב לתיקייה (אופציונלי).
 
-If omitted, the current directory is analyzed.
+במידה שלא יוזן נתיב, תנותח התיקייה הנוכחית.
 
-### Output
+### פלט
 
-- Number of files
-- Number of directories
-- Number of symbolic links
+- מספר הקבצים
+- מספר התיקיות
+- מספר הקישורים הסימבוליים
 
 ---
 
 ## sort_file.sh
 
-Sorts a text file alphabetically.
+### מטרת הסקריפט
+ממיין קובץ טקסט לפי סדר אלפביתי.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/sort_file.sh <filename>
 ```
 
-### Required Input
+### קלט נדרש
 
-Path to a text file.
+נתיב לקובץ טקסט.
 
-### Output
+### פלט
 
-Creates:
+נוצר קובץ חדש בשם:
 
-```
+```text
 sorted_<filename>
 ```
 
@@ -183,109 +187,114 @@ sorted_<filename>
 
 ## check_internet.sh
 
-Checks Internet connectivity.
+### מטרת הסקריפט
+בודק האם קיימת גישה לאינטרנט.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/check_internet.sh
 ```
 
-### Required Input
+### קלט נדרש
 
-None.
+אין.
 
-### Output
+### פלט
 
-Displays whether the Internet connection is active.
+מוצגת הודעה האם קיימת גישה לאינטרנט.
 
 ---
 
 ## add_prefix.sh
 
-Adds a prefix to every `.txt` file in a directory.
+### מטרת הסקריפט
+מוסיף קידומת לכל קבצי ה־`.txt` שבתיקייה.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/add_prefix.sh <directory> <prefix>
 ```
 
-### Required Input
+### קלט נדרש
 
-- Directory path
-- Prefix string
+- נתיב לתיקייה.
+- הקידומת שברצונך להוסיף.
 
-### Output
+### פלט
 
-All text files are renamed with the specified prefix.
+כל קבצי הטקסט שבתיקייה ישונו כך שתתווסף להם הקידומת שהוזנה.
 
 ---
 
 ## delete_old_files.sh
 
-Deletes files older than a specified number of days.
+### מטרת הסקריפט
+מוחק קבצים ישנים בהתאם למספר ימים שהמשתמש קובע.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/delete_old_files.sh <directory> <days>
 ```
 
-### Required Input
+### קלט נדרש
 
-- Directory path
-- Number of days
+- נתיב לתיקייה.
+- מספר הימים.
 
-### Output
+### פלט
 
-Old files are deleted.
+כל הקבצים הישנים מהמספר שנבחר יימחקו.
 
 ---
 
 ## weather.sh
 
-Displays the weather forecast for a city.
+### מטרת הסקריפט
+מציג את מזג האוויר של עיר מסוימת.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/weather.sh <city_name>
 ```
 
-### Required Input
+### קלט נדרש
 
-City name.
+שם העיר.
 
-### Output
+### פלט
 
-Current weather information from wttr.in.
+מוצג מזג האוויר הנוכחי של העיר באמצעות השירות wttr.in.
 
 ---
 
 ## ascii_clock.sh
 
-Displays a real-time ASCII clock.
+### מטרת הסקריפט
+מציג שעון דיגיטלי חי בפורמט ASCII.
 
-### Usage
+### אופן ההרצה
 
 ```bash
 ./Scripts/ascii_clock.sh
 ```
 
-### Required Input
+### קלט נדרש
 
-None.
+אין.
 
-### Output
+### פלט
 
-A live updating ASCII digital clock.
+מוצג שעון דיגיטלי המתעדכן בזמן אמת.
 
 ---
 
-# Project Structure
+# מבנה הפרויקט
 
-```
+```text
 Scripts/
 ├── add_prefix.sh
 ├── ascii_clock.sh
@@ -301,17 +310,18 @@ Scripts/
 
 ---
 
-# Requirements
+# דרישות מערכת
 
 - Bash
 - tar
-- curl (used by `weather.sh`)
-- figlet (used by `ascii_clock.sh`)
-- Internet connection (for `weather.sh` and `check_internet.sh`)
+- curl (עבור `weather.sh`)
+- figlet (עבור `ascii_clock.sh`)
+- חיבור לאינטרנט (עבור `weather.sh` ו־`check_internet.sh`)
 
 ---
 
-# Notes
+# הערות
 
-- Some scripts automatically install missing dependencies (`curl` or `figlet`) if they are not already installed.
-- All scripts were developed and tested on Ubuntu Linux.
+- חלק מהסקריפטים מתקינים באופן אוטומטי תלויות חסרות כגון `curl` או `figlet`, במידה שאינן מותקנות במערכת.
+- כל הסקריפטים פותחו ונבדקו על מערכת ההפעלה Ubuntu Linux.
+- כל סקריפט ניתן להרצה באופן עצמאי ואינו תלוי בסקריפטים האחרים.
